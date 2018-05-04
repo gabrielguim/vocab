@@ -24,7 +24,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGray"
                     android:text="PALAVRA"/>
@@ -40,7 +40,7 @@
                         android:id="@+id/word_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WORD JP"
+                        android:textSize="14sp"
                         android:gravity="start"/>
 
                 </RelativeLayout>
@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGray"
                     android:text="PALAVRA (INGLÊS)"/>
@@ -83,7 +83,7 @@
                         android:id="@+id/word_en_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WORD JP"
+                        android:textSize="14sp"
                         android:gravity="start"/>
 
                 </RelativeLayout>
@@ -110,7 +110,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGray"
                     android:text="FURIGANA"/>
@@ -126,7 +126,7 @@
                         android:id="@+id/furigana_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WORD JP"
+                        android:textSize="14sp"
                         android:gravity="start"/>
 
                 </RelativeLayout>
@@ -153,7 +153,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGray"
                     android:text="KANJI"/>
@@ -169,7 +169,7 @@
                         android:id="@+id/kanji_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WORD JP"
+                        android:textSize="14sp"
                         android:gravity="start"/>
 
                     <ImageView
@@ -204,7 +204,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10sp"
+                    android:textSize="12sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGray"
                     android:text="CATEGORIA"/>
@@ -220,7 +220,7 @@
                         android:id="@+id/category_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WORD JP"
+                        android:textSize="14sp"
                         android:gravity="start"/>
 
                 </RelativeLayout>

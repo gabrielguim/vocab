@@ -6,6 +6,9 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray
 import okhttp3.*
 import java.io.IOException
+import okhttp3.RequestBody
+
+
 
 /**
  * Created by Gabriel on 03/05/2018.
@@ -15,6 +18,7 @@ class RESTAPI() {
     companion object {
         private val getListsURL: String = "https://vocabpractice-cbb5.restdb.io/rest/lists"
         private val getVocabularyURL: String = "https://vocabpractice-cbb5.restdb.io/rest/vocabulary"
+        private val postWordURL: String = "https://vocabpractice-cbb5.restdb.io/rest/vocabulary/"
 
         fun getWords(query: String?, callback: (List<Word>?) -> Unit) {
             val list = ArrayList<Word>()
@@ -32,6 +36,7 @@ class RESTAPI() {
                     val gson = GsonBuilder().create()
 
                     val jsonArray = gson.fromJson(body, JsonArray::class.java)
+                    println(body)
                     for (json in jsonArray) {
                         val word = gson.fromJson(json, Word::class.java)
                         list.add(word)
@@ -48,8 +53,6 @@ class RESTAPI() {
         }
 
         fun getList(query: String?, callback: (WordList?) -> Unit) {
-            val lists = ArrayList<WordList>()
-
             val request = Request.Builder().url(getListsURL.plus(query))
                     ?.addHeader("content-type", "application/json")
                     ?.addHeader("x-apikey", "5aeb6ae025a622ae4d528803")
@@ -102,6 +105,36 @@ class RESTAPI() {
                 }
             })
         }
+
+        fun editWord(word: Word, callback: (Boolean) -> Unit) {
+
+            val gson = GsonBuilder().create()
+            val mediaType = MediaType.parse("application/json; charset=utf-8")
+            val body = RequestBody.create(mediaType, gson.toJson(word))
+
+            val request = Request.Builder().url(postWordURL.plus(word._id))
+                    ?.addHeader("content-type", "application/json")
+                    ?.addHeader("x-apikey", "5aeb6ae025a622ae4d528803")
+                    ?.addHeader("cache-control","no-cache")
+                    ?.put(body)
+                    ?.build()!!
+
+            val client = OkHttpClient()
+            client.newCall(request).enqueue(object: Callback {
+                override fun onResponse(call: Call?, response: Response?) {
+                    val body = response?.body()?.string()
+                    println(body)
+
+                    callback(true)
+                }
+
+                override fun onFailure(call: Call?, e: IOException?) {
+                    callback(false)
+                }
+            })
+
+        }
+
     }
 
 }

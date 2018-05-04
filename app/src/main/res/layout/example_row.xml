@@ -20,16 +20,16 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
-                android:textColor="@color/colorDarkGray"
-                android:text="WORD PT"/>
+                android:textColor="@color/colorDarkGray"/>
 
             <TextView
                 android:id="@+id/text_jp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:textSize="14sp"
                 android:layout_marginStart="8dp"/>
 
             <TextView
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:layout_marginStart="8dp"
-                android:textColor="@color/colorGray"/>
+                android:textSize="14sp"/>
 
         </LinearLayout>
 
