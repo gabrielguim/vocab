@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WORD PT"/>
+
+            <TextView
+                android:id="@+id/title_jp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WORD JP"
+                android:textColor="@color/colorGray"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/review_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star_border_white_24dp"
+            android:tint="@color/colorGray"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/edit_word"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageView
+            android:id="@+id/edit_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit_white_24dp"
+            android:tint="@color/colorGray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/layout" />
+
+</android.support.constraint.ConstraintLayout>
